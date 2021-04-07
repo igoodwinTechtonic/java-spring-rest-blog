@@ -38,7 +38,6 @@ public class Post {
     public Long getId() {
         return id;
     }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -46,7 +45,6 @@ public class Post {
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
@@ -54,7 +52,6 @@ public class Post {
     public String getBody() {
         return body;
     }
-
     public void setBody(String body) {
         this.body = body;
     }
@@ -62,14 +59,12 @@ public class Post {
     public Date getDate() {
         return date;
     }
-
+    public void setDate(Date date) {
+        this.date = date;
+    }
     public String getDateStr() {
         DateFormat outputFormatter = new SimpleDateFormat("MM/dd/yyyy");
         return outputFormatter.format(this.date);
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     @Override

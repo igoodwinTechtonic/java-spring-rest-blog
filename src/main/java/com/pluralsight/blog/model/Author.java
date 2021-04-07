@@ -33,18 +33,20 @@ public class Author {
         setPassword(password);
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public void setPassword(String password) {
          this.password = PASSWORD_ENCODER.encode(password);
     }
-
-    public Long getId() {
-        return id;
+    public String getPassword() {
+        return password;
     }
 
     public String getFirstName() {
         return firstname;
     }
-
     public void setFirstName(String firstName) {
         this.firstname = firstName;
     }
@@ -52,7 +54,6 @@ public class Author {
     public String getLastname() {
         return lastname;
     }
-
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
@@ -60,13 +61,8 @@ public class Author {
     public String getUsername() {
         return username;
     }
-
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
     }
 
     @Override
