@@ -24,15 +24,18 @@ public class Post {
     @Temporal(TemporalType.DATE)
     @CreationTimestamp
     private Date date;
+    @ManyToOne(fetch = FetchType.EAGER)
+    private Author author;
 
     public Post() {
         super();
     }
 
-    public Post(String title, String body){//, Author author) {
+    public Post(String title, String body) { //, Author author) {
         this();
         this.title = title;
         this.body = body;
+        //this.author = author;
     }
 
     public Long getId() {
@@ -66,6 +69,9 @@ public class Post {
         DateFormat outputFormatter = new SimpleDateFormat("MM/dd/yyyy");
         return outputFormatter.format(this.date);
     }
+
+    public Author getAuthor() { return this.author; }
+    public void setAuthor(Author author) { this.author = author; }
 
     @Override
     public boolean equals(Object obj) {
